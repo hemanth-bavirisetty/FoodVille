@@ -1,0 +1,25 @@
+.card{
+    border: 3px solid rgb(224, 222, 222);
+    width: 270px;
+    height: 437px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+.details{
+    display: flex;
+    background-color: rgb(234, 235, 235);
+
+
+    justify-content: space-around;
+    align-items: center;
+}
+

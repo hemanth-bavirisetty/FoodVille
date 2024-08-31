@@ -1,0 +1,32 @@
+.body{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    justify-items:last baseline;    
+    align-items: center;
+    padding: 10px;
+    margin: 50px;
+}
+.search>input{
+    width: 300px;
+
+    border: 3px solid rgb(224, 222, 222);
+    border-radius:20px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+
+
+.Restaurents{
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}

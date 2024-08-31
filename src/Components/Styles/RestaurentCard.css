@@ -1,0 +1,40 @@
+.card{
+    border: 3px solid #e0dede;
+    width: 270px;
+    height: 437px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.img-1 {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+
+
+}
+.details{
+    display: flex;
+    background-color: rgb(234, 235, 235);
+    border-radius: 18px;
+
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  width: 180px;
+  white-space: nowrap;
+    
+}
+.cuisines{
+    overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  width: 180px;
+  white-space: nowrap;
+}
