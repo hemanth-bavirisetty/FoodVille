@@ -38,6 +38,7 @@ class Profile extends React.Component {
     return (
       <div className=" text-center rounded-xl p-5 items-center">
         <img
+          className="rounded-full"
           src={this.state.userInfo.avatar_url}
           style={{ margin: "auto", width: "150px" }}
         />

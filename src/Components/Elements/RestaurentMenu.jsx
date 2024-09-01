@@ -1,51 +1,16 @@
-import { CloudinaryImgURL, RestaurentMenuURL } from "@/constants";
+import { CloudinaryImgURL } from "@/constants";
 import { ShoppingBagIcon } from "lucide-react";
 import { ShimmerUI } from "@/Components/Elements";
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useRestaurantMenu } from "@/utils/useRestaurantMenuHooks";
 
-async function getRestaurentMenu(id, setRestaurentInfo) {
-  const data = await fetch(RestaurentMenuURL + id);
-  const json = await data.json();
-  console.log(json);
-  setRestaurentInfo(json);
-}
 
-function getItemCards(restaurentInfo) {
-  const cardsAdress =
-    restaurentInfo.data?.cards.filter((c) => c.groupedCard) || [];
-  console.log(cardsAdress[0]);
-  const cardsLocated =
-    cardsAdress[0]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
-  console.log(cardsLocated);
-  const ItemCategoryCards =
-    cardsLocated
-      .filter(
-        (card) =>
-          card.card.card["@type"] ===
-          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-      )
-      .map((card) => [...card.card.card.itemCards])
-      .flat(Infinity) || [];
-
-  const menuItemsCards = ItemCategoryCards.map((c) => [c.card.info]).flat(
-    Infinity
-  );
-  console.log(menuItemsCards);
-
-  return menuItemsCards;
-}
 
 export default function RestaurentMenu() {
-  const [restaurentInfo, setRestaurentInfo] = useState([]);
   const { id } = useParams();
-  useEffect(() => {
-    getRestaurentMenu(id, setRestaurentInfo);
-  }, [id]);
-  const { name, city, areaName, cuisines, cloudinaryImageId } =
-    restaurentInfo.data?.cards[2]?.card?.card?.info || {};
+  const [info, menuItems ] =useRestaurantMenu(id)
 
-  const menuItems = getItemCards(restaurentInfo);
+  const { name, city, areaName, cuisines, cloudinaryImageId } = info || {};
 
   return (
     <>
