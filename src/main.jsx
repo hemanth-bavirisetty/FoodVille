@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Profile,About,Contact,Error, RestaurentMenu,BodyComponent } from '@/Components/Elements/'
+import {Profile,About,Contact,Error, RestaurentMenu,BodyComponent,Instamart } from '@/Components/Elements/'
 
 const appRouter = createBrowserRouter([
   {
@@ -29,7 +29,11 @@ const appRouter = createBrowserRouter([
       {
         path: '/restaurent/:id',
         element:<RestaurentMenu />
-      }
+      },
+      {
+        path: '/instamart',
+        element:<Instamart />
+      },
     ]
   }
 ])

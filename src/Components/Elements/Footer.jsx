@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <>
-      <div className="footer h-72 bg-gray-900">
+      <div className="footer h-72 bg-gray-900 w-full">
         <div className="">
           <div className="  text-white p-20">
             <img
