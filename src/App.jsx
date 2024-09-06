@@ -1,4 +1,4 @@
-import HeaderComponent from "./Components/Elements/HeaderComponent";
+import { HeaderComponent, Footer } from './Components/Elements';
 import './App.css'
 import {Outlet} from "react-router-dom"
 
@@ -8,10 +8,11 @@ function App() {
     <>
       <HeaderComponent></HeaderComponent>
       <Outlet></Outlet>
+      <Footer></Footer>
       
     </>
   )
 }
 
-
+  
 export default App;

@@ -7,5 +7,9 @@ import Profile from "./Profile";
 import RestaurentCard from "./RestaurentCard";
 import RestaurentMenu from "./RestaurentMenu";
 import ShimmerUI from "./ShimmerUI";
+import Footer from "./Footer";
 
-export {About, BodyComponent, Contact, Error, HeaderComponent, Profile, RestaurentCard, RestaurentMenu, ShimmerUI }  
+
+
+
+export {About, BodyComponent, Contact, Error, Footer, HeaderComponent, Profile, RestaurentCard, RestaurentMenu, ShimmerUI }  

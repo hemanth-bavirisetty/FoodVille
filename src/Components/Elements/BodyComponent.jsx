@@ -92,8 +92,7 @@ export default function BodyComponent() {
                 })
               )}
             </div>
-          ))
-        
+          ))        
         }
       </div>
     </>
