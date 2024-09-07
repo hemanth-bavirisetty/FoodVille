@@ -9,8 +9,19 @@ import RestaurentMenu from "./RestaurentMenu";
 import ShimmerUI from "./ShimmerUI";
 import Footer from "./Footer";
 import Instamart from "./Instamart";
+import AlertOffline from "./AlertOffline";
 
-
-
-
-export {About, BodyComponent, Contact, Error, Instamart, Footer, HeaderComponent, Profile, RestaurentCard, RestaurentMenu, ShimmerUI }  
+export {
+	AlertOffline,
+	About,
+	BodyComponent,
+	Contact,
+	Error,
+	Instamart,
+	Footer,
+	HeaderComponent,
+	Profile,
+	RestaurentCard,
+	RestaurentMenu,
+	ShimmerUI,
+};
