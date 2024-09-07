@@ -1,4 +1,4 @@
-import { CloudinaryImgURL } from "@/constants";
+import { CloudinaryImgURL } from "@/utils/constants";
 import { ShoppingBagIcon } from "lucide-react";
 import { ShimmerUI } from "@/Components/Elements";
 import { useParams } from "react-router-dom";

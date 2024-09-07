@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { RestaurentMenuURL } from "@/constants";
+import { RestaurentMenuURL } from "./constants";
 export async function getResInfo(resId) {
   const data = await fetch(RestaurentMenuURL + resId);
   const json = await data.json();

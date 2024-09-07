@@ -1,4 +1,4 @@
-import { RestaurentListURL } from "@/constants";
+import { RestaurentListURL } from "./constants";
  
 export function getItemCards(restaurentlist) {
     console.log(restaurentlist);

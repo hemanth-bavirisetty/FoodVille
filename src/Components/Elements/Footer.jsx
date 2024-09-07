@@ -1,4 +1,4 @@
-import { LogoImgURL } from "@/constants";
+import { LogoImgURL } from "@/utils/constants";
 
 
 function Footer() {

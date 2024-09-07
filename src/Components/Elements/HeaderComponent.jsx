@@ -2,7 +2,7 @@ import "../Styles/HeaderComponent.css";
 import { useState } from "react";
 import { Button } from "@/Components/ui/button";
 import {Link} from "react-router-dom"
-import { LogoImgURL } from "@/constants";
+import { LogoImgURL } from "@/utils/constants";
 
 const Title = () => (
   <Link href="/">

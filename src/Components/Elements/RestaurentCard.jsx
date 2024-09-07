@@ -1,4 +1,4 @@
-import { CloudinaryImgURL } from "@/constants"
+import { CloudinaryImgURL } from "@/utils/constants";
 import {Link} from "react-router-dom"
 import "../Styles/RestaurentCard.css"
 export default function RestaurentCard(info){
