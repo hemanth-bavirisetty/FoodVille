@@ -1,12 +1,11 @@
-
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
 function ContactUsForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const mapRef = useRef(null);
@@ -31,16 +30,22 @@ function ContactUsForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+    console.log("Form Data Submitted:", formData);
     // Here you can add your logic to handle form submission, e.g., sending data to a server
   };
 
   return (
     <div className="flex flex-col md:flex-row">
       <div className="w-full md:w-1/2 p-6">
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white shadow-md rounded-lg p-6"
+        >
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
               Name
             </label>
             <input
@@ -54,7 +59,10 @@ function ContactUsForm() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
               Email
             </label>
             <input
@@ -68,7 +76,10 @@ function ContactUsForm() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="subject" className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="subject"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
               Subject
             </label>
             <input
@@ -82,7 +93,10 @@ function ContactUsForm() {
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="message"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
               Message
             </label>
             <textarea
@@ -105,7 +119,7 @@ function ContactUsForm() {
         </form>
       </div>
       <div className="w-full md:w-1/2 p-6">
-        <div ref={mapRef} style={{ height: '400px', width: '100%' }}></div>
+        <div ref={mapRef} style={{ height: "400px", width: "100%" }}></div>
       </div>
     </div>
   );

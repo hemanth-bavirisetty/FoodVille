@@ -1,32 +1,44 @@
-// import 'util'
-// import 'process'
-// import 'buffer'
-// import 'stream-browserify';
-// import nodemailer from 'nodemailer';
+import React, { useState } from "react";
 
+const useSendEmail = () => {
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState(null);
+	const [success, setSuccess] = useState(false);
 
-// export const sendEmail = async (to, fromName, message) => {
-//     let transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         auth: {
-//             user: 'your_email@gmail.com',
-//             pass: 'your_email_password',
-//         },
-//     });
+	const sendEmail = async (emailData) => {
+		setIsLoading(true);
+		setError(null);
+		setSuccess(false);
 
-//     let mailOptions = {
-//         from: 'your_email@gmail.com',
-//         to,
-//         subject: 'Contact Form Submission',
-//         text: `Name: ${fromName}\n\nMessage:\n${message}`,
-//     };
+		try {
+			const response = await fetch("/api/sendEmail", {
+				// Replace with your API endpoint
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(emailData),
+			});
 
-//     try {
-//         let info = await transporter.sendMail(mailOptions);
-//         console.log('Email sent successfully:', info.response);
-//         return true;
-//     } catch (error) {
-//         console.error('Error sending email:', error);
-//         return false;
-//     }
-// };
+			if (response.ok) {
+				setSuccess(true);
+			} else {
+				const errorData = await response.json();
+				setError(errorData.message || "Failed to send email.");
+			}
+		} catch (error) {
+			setError("An error occurred while sending the email.");
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
+	return {
+		sendEmail,
+		isLoading,
+		error,
+		success,
+	};
+};
+
+export default useSendEmail;

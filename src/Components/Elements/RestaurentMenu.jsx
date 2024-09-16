@@ -4,11 +4,9 @@ import { ShimmerUI } from "@/Components/Elements";
 import { useParams } from "react-router-dom";
 import { useRestaurantMenu } from "@/utils/useRestaurantMenuHooks";
 
-
-
 export default function RestaurentMenu() {
   const { id } = useParams();
-  const [info, menuItems ] =useRestaurantMenu(id)
+  const [info, menuItems] = useRestaurantMenu(id);
 
   const { name, city, areaName, cuisines, cloudinaryImageId } = info || {};
 

@@ -1,5 +1,5 @@
 import { RestaurentListURL } from "./constants";
- 
+
 export function getItemCards(restaurentlist) {
     console.log(restaurentlist);
     const RestaurentCards =

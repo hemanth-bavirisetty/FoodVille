@@ -12,16 +12,16 @@ import Instamart from "./Instamart";
 import AlertOffline from "./AlertOffline";
 
 export {
-	AlertOffline,
-	About,
-	BodyComponent,
-	Contact,
-	Error,
-	Instamart,
-	Footer,
-	HeaderComponent,
-	Profile,
-	RestaurentCard,
-	RestaurentMenu,
-	ShimmerUI,
+  AlertOffline,
+  About,
+  BodyComponent,
+  Contact,
+  Error,
+  Instamart,
+  Footer,
+  HeaderComponent,
+  Profile,
+  RestaurentCard,
+  RestaurentMenu,
+  ShimmerUI,
 };

@@ -33,9 +33,7 @@ function getItemCards(restaurentInfo) {
   return menuItemsCards;
 }
 
-
 export function useRestaurantMenu(id) {
-
   const [restaurentInfo, setRestaurentInfo] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
 
@@ -46,14 +44,7 @@ export function useRestaurantMenu(id) {
     });
   }, [id]);
 
-  const { info } =
-  restaurentInfo?.data?.cards[2]?.card?.card || {};
+  const { info } = restaurentInfo?.data?.cards[2]?.card?.card || {};
 
-  return [info,restaurants];
+  return [info, restaurants];
 }
-
-
-
-
-
-

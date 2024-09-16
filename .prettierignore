@@ -1,0 +1,22 @@
+# Ignore specific files and folders
+
+/node_modules
+/dist
+/build
+/coverage
+
+# Ignore files with specific extensions
+
+*.log
+*.min.js
+*.min.css
+*.map
+
+# Ignore specific files
+
+package-lock.json
+yarn.lock
+
+# Ignore folders starting with a dot
+
+
