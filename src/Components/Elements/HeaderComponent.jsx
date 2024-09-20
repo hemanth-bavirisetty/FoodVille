@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Button } from "@/Components/ui/button";
 import { Link } from "react-router-dom";
 import { LogoImgURL } from "@/utils/constants";
 import useIsOnline from "@/utils/useIsOnline";
 import { AlertOffline } from ".";
+import userContext from "@/utils/userContext";
 
 const Title = () => (
   <Link href="/">
@@ -14,6 +15,7 @@ export default function HeaderComponent() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isOpen, setisOpen] = useState(false);
   const online = useIsOnline();
+  const { user } = useContext(userContext);
 
   return (
     <div className="border-[3px] lg:flex lg:justify-between lg:items-center   p-[15px] rounded-[20px] m-[50px] items-center ">
@@ -51,6 +53,7 @@ export default function HeaderComponent() {
           <li className="px-[20px] text-xl font-semibold py-1 text-center  w-full  ">
             {online ? null : <AlertOffline />}
           </li>
+          <li>{user.name}</li>
           <li className="px-[20px] text-xl font-semibold py-1 text-center  w-full   ">
             {isLoggedIn ? (
               <Button

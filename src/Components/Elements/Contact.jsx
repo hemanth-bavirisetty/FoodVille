@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 function ContactUsForm() {
   const [formData, setFormData] = useState({
@@ -7,18 +7,6 @@ function ContactUsForm() {
     subject: "",
     message: "",
   });
-
-  const mapRef = useRef(null);
-
-  useEffect(() => {
-    const google = window.google;
-    if (google && mapRef.current) {
-      new google.maps.Map(mapRef.current, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      });
-    }
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -117,9 +105,6 @@ function ContactUsForm() {
             </button>
           </div>
         </form>
-      </div>
-      <div className="w-full md:w-1/2 p-6">
-        <div ref={mapRef} style={{ height: "400px", width: "100%" }}></div>
       </div>
     </div>
   );
